@@ -1,7 +1,7 @@
 pragma solidity ^0.8.17;
 
 import "forge-std/Test.sol";
-import {ARES} from "../../src/modules/AREScontract.sol";
+import {ARES} from "../src/modules/AREScontract.sol";
 import {MockToken} from "./mockData/mockToken.sol";
 
 contract ARESTest is Test {
@@ -79,7 +79,7 @@ contract ARESTest is Test {
         ares.confirmTx(txId);
 
         vm.prank(owner1);
-        vm.expectRevert("not enough confirmations");
+        vm.expectRevert("not ready");
         ares.executeTx(txId);
     }
 
@@ -93,9 +93,8 @@ contract ARESTest is Test {
         vm.prank(owner2); ares.confirmTx(txId);
         vm.prank(owner1); ares.executeTx(txId);
 
-        bytes memory data2 = abi.encodeWithSignature("setMerkleRoot(bytes32)", root);
         vm.prank(owner1);
-        uint256 txId2 = ares.submitTx(address(ares), data2, 0);
+        uint256 txId2 = ares.submitTx(address(ares), data, 0);
         vm.prank(owner1); ares.confirmTx(txId2);
         vm.prank(owner2); ares.confirmTx(txId2);
 

@@ -1,7 +1,7 @@
 pragma solidity ^0.8.17;
 
 import "forge-std/Test.sol";
-import {TimeDelayedExecutionEngine} from "../../src/modules/timeDelayedExecutionEngine.sol";
+import {TimeDelayedExecutionEngine} from "../src/modules/timeDelayedExecutionEngine.sol";
 import {MockTreasury} from "./mockData/mockTreasury.sol";
 import {MockToken} from "./mockData/mockToken.sol";
 

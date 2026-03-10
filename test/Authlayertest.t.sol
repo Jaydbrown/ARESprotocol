@@ -1,7 +1,7 @@
 pragma solidity ^0.8.17;
 
 import "forge-std/Test.sol";
-import {cryptoGraphicAuthorizationLAyer} from "../../src/modules/cryptoGraphicAuthorizationLAyer.sol";
+import {cryptoGraphicAuthorizationLAyer} from "../src/modules/cryptographicAuthorizationLayer.sol";
 import {MockToken} from "./mockData/mockToken.sol";
 import {MockGovernors} from "./mockData/mockGovernor.sol";
 
@@ -70,7 +70,7 @@ contract AuthLayerTest is Test {
         (uint8 v, bytes32 r, bytes32 s) = vm.sign(claimantKey, hash);
 
         vm.prank(claimant);
-        vm.expectRevert("insufficient balance");
+        vm.expectRevert("the amount you entered is too little");
         authLayer.verifySentToken(amount, proposalId, nonce, v, r, s);
     }
 

@@ -1,7 +1,7 @@
 pragma solidity ^0.8.17;
 
 import "forge-std/Test.sol";
-import {ProposalModule} from "../../src/modules/transactionProposalSystem.sol";
+import {ProposalModule} from "../src/modules/transactionProposalSystem.sol";
 import {MockToken} from "./mockData/mockToken.sol";
 
 contract ProposalModuleTest is Test {
