@@ -8,24 +8,6 @@ a delay, and then execute. The system is split into four folders: modules,
 libraries, interface, and core. Each folder has a specific job and they do 
 not overlap.
 
-## Folder Structure
-
-src/
-├── modules/
-│   ├── ProposalModule.sol
-│   ├── TimeDelayedExecutionEngine.sol
-│   └── ARES.sol
-├── libraries/
-│   ├── proposeAssetTransaction.sol
-│   ├── MultiSigLib.sol
-│   ├── MerkleLib.sol
-│   └── ECDSA.sol
-├── interface/
-│   ├── Itoken.sol
-│   ├── Itreasury.sol
-│   └── IgoverningParticipants.sol
-└── core/
-    └── cryptoGraphicAuthorizationLayer.sol
 
 ## System Architecture
 
