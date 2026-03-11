@@ -7,27 +7,7 @@ distribution through a scalable Merkle-based claim system.
 
 ---
 
-## Folder Structure
-```
-src/
-├── modules/
-│   ├── ProposalModule.sol
-│   ├── TimeDelayedExecutionEngine.sol
-│   └── ARES.sol
-├── libraries/
-│   ├── proposeAssetTransaction.sol
-│   ├── MultiSigLib.sol
-│   ├── MerkleLib.sol
-│   └── ECDSA.sol
-├── interface/
-│   ├── Itoken.sol
-│   ├── Itreasury.sol
-│   └── IgoverningParticipants.sol
-└── core/
-    └── cryptoGraphicAuthorizationLayer.sol
-```
 
----
 
 ## How It Works
 
