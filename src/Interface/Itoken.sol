@@ -14,4 +14,5 @@ interface Itoken{
     function approve(address spender, uint value) external returns (bool);
     function transfer(address to, uint value) external returns (bool);
     function transferFrom(address from, address to, uint value) external returns (bool);
+    /* Thes are the tokens that are being shared in the protocol*/
 }

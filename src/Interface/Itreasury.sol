@@ -6,4 +6,5 @@ interface Itreasury {
     function transfer(address token, uint256 amount, address recipient) external;
     function call(address target, bytes calldata data) external;
     function upgrade (address oldcontract, address newContract) external;
+    /* These all explain the treaury actions that are executable*/
 }
