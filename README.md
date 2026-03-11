@@ -5,7 +5,6 @@ participants propose, approve, and execute treasury actions through a
 time-delayed, multi-confirmation system. It also handles contributor reward 
 distribution through a scalable Merkle-based claim system.
 
----
 
 
 
@@ -39,7 +38,6 @@ is updated through a multisig flow — owners submit, confirm to threshold,
 and execute. Claims are tracked per root so a root update does not 
 invalidate old claims.
 
----
 
 ## Security
 
@@ -55,7 +53,6 @@ invalidate old claims.
 | Double claim | `claimed[root][address]` mapping |
 | Timestamp manipulation | `eta` committed to storage, `MIN_DELAY` = 1 day |
 
----
 
 ## Setup
 ```bash
@@ -64,7 +61,6 @@ forge build
 forge test
 ```
 
----
 
 ## Running Tests
 ```bash
@@ -105,7 +101,6 @@ forge test --match-test test_proposalLifecycle -vvv
 - `testFail_belowDelayQueue` — queue with delay below minimum
 - `testFail_expiredTransaction` — execute after 7 day expiry window
 
----
 
 ## Contracts
 
@@ -125,7 +120,6 @@ claims and a multisig for root updates.
 Entry point for signed actions. Handles ECDSA recovery, nonce management, 
 replay protection, and domain binding.
 
----
 
 ## Libraries
 
@@ -141,7 +135,6 @@ Proof verification, leaf building, message hashing, signer recovery.
 ### ECDSA
 Signature recovery with s-value malleability protection.
 
----
 
 ## Interfaces
 
@@ -149,6 +142,5 @@ Signature recovery with s-value malleability protection.
 - `Itreasury` — deposit, transfer, call, upgrade, checkBalance
 - `IgoverningParticipants` — createProposal, queueProposal, confirmProposal, executeProposal
 
----
 
 ## License
