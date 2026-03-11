@@ -6,7 +6,6 @@ ARES moves tokens and executes treasury calls. That makes it a target.
 This document covers the attack surfaces, how the system handles them, 
 and what gaps still exist.
 
----
 
 ## Attack Surfaces
 
